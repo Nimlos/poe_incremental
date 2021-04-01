@@ -2,6 +2,9 @@ package sample;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyEvent;
+import javafx.event.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -56,6 +59,27 @@ public class Main extends Application {
                 gc.drawImage( sun, 196, 196 );
             }
         }.start();
+
+
+        theScene.setOnKeyPressed(
+                new EventHandler<KeyEvent>()
+                {
+                    public void handle(KeyEvent e)
+                    {
+                        String code = e.getCode().toString();
+                        System.out.println("Pressed: " + code);
+                    }
+                });
+
+        theScene.setOnKeyReleased(
+                new EventHandler<KeyEvent>()
+                {
+                    public void handle(KeyEvent e)
+                    {
+                        String code = e.getCode().toString();
+                        System.out.println("Released: " + code);
+                    }
+                });
 
         theStage.show();
     }
