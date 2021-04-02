@@ -27,7 +27,7 @@ public class Main extends Application {
 //        primaryStage.setTitle("Hello World");
 //        primaryStage.setScene(new Scene(root, 300, 275));
 //        primaryStage.show();
-        theStage.setTitle( "Timeline Example" );
+        theStage.setTitle( "POE INC" );
 
         Group root = new Group();
         Scene theScene = new Scene( root );
@@ -57,6 +57,7 @@ public class Main extends Application {
                 gc.drawImage( space, 0, 0 );
                 gc.drawImage( earth, x, y );
                 gc.drawImage( sun, 196, 196 );
+
             }
         }.start();
 
